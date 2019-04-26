@@ -43,23 +43,23 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: "Task 1",
+      title: "Task1",
       isCompleted: false
     },
     {
       id: 2,
-      title: "Task 2",
+      title: "Task2",
       isCompleted: false
     },
     {
       id: 3,
-      title: "Task 3",
+      title: "Task3",
       isCompleted: false
     }
   ]);
 
-  const addTodo = list => {
-    const newTodos = [...todos, { list }];
+  const addTodo = title => {
+    const newTodos = [...todos, { title }];
     setTodos(newTodos);
   };
 
@@ -89,7 +89,6 @@ function App() {
             removeTodo={removeTodo}
           />
         ))}
-        
       </div>
     </div>
   );
